@@ -5,9 +5,6 @@
 4. If project is located in folder, change RewriteBase in **.htaccess** from **/** to **/path/to/folder/**
 5. Make **/files** folder writeable
 
-### To-Do
-Replace authorization with own one in **auth.php**.
-
 ### Tips
 * To **add**/**edit**/**delete** items, open **Context Menu**.
 * To open **Context Menu**, press and hold mouse right button on empty space.
@@ -15,8 +12,18 @@ Replace authorization with own one in **auth.php**.
 * If groups does not fit the screen, use **left** and **right** keyboard keys to navigate between groups.
 * One more way to scroll groups is to hold **CTRL** key and move **Mouse Wheel**
 
-### Examples
-![Open Context Menu](images/1.gif?raw=true)
-![Drag Posts](images/2.gif?raw=true)
-![Navigate Between Groups](images/3.gif?raw=true)
-![Create Post](images/4.gif?raw=true)
+### Example (Read Only)
+http://posts.examples.vnat.co
+
+### To-Do
+Create own authentication form in **auth.php**.
+
+### How to Use
+![Open Context Menu](images/1.gif?raw=true)  
+![Drag Posts](images/2.gif?raw=true)  
+![Navigate Between Groups](images/3.gif?raw=true)  
+![Create Post](images/4.gif?raw=true)  
+
+### Libraries Used
+[TinyMCE](https://www.tinymce.co)  
+[CodeMirro](https://codemirror.net/)  

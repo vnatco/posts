@@ -27,3 +27,4 @@ Create own authentication form in **auth.php**.
 ### Libraries Used
 [TinyMCE](https://www.tinymce.co)  
 [CodeMirro](https://codemirror.net/)  
+[Code-Prettify](https://github.com/google/code-prettify)  

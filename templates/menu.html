@@ -1,0 +1,120 @@
+<div class="menuContent">
+	<table style="height:100%;">
+		<tr>
+			<td>
+				<div class="ddHolder clientDD" data-name="client" data-value="">
+					<table class="ddButton" style="height:100%;">
+						<tr>
+							<td><div style="width:20px;height:80px;"></div></td>
+							<td><div class="title"></div></td>
+							<td><div style="width:12px;"></div></td>
+							<td><div class="ic icDown"></div></td>
+							<td><div style="width:20px;"></div></td>
+						</tr>
+					</table>
+					<div class="ddContent"></div>
+				</div>
+			</td>
+			<td><div class="delimiter"></div></td>
+			<td>
+				<div class="ddHolder projectDD" data-name="project" data-value="">
+					<table class="ddButton" style="height:100%;">
+						<tr>
+							<td><div style="width:20px;height:80px;"></div></td>
+							<td><div class="title"></div></td>
+							<td><div style="width:12px;"></div></td>
+							<td><div class="ic icDown"></div></td>
+							<td><div style="width:20px;"></div></td>
+						</tr>
+					</table>
+					<div class="ddContent"></div>
+				</div>
+			</td>
+		</tr>
+	</table>
+</div>
+<script>
+	var ddClientArray=$.parseJSON(atob("@_CLIENTS"));
+	var ddProjectArray=$.parseJSON(atob("@_PROJECTS"));
+	var currentClient="@_CURRENT_CLIENT";
+	var currentClientId="@_CURRENT_CLIENT_ID";
+	var currentProject="@_CURRENT_PROJECT";
+	var currentProjectId="@_CURRENT_PROJECT_ID";
+	
+	$(".clientDD").attr("data-value",currentClientId);
+	$(".clientDD").find(">.ddButton .title").empty().append(currentClient);
+	$(".projectDD").attr("data-value",ddProjectArray);
+	$(".projectDD").find(">.ddButton .title").empty().append(currentProject);
+	
+	if(ddClientArray.length<=0){
+		$(".clientDD").find(".icDown").parent().prev().remove();
+		$(".clientDD").find(".icDown").parent().remove();
+	}else{
+		$.each(ddClientArray,function(i,item){
+			$(".clientDD .ddContent").append('<div class="ddItem '+(currentClientId==item.ID?"current":"")+'" data-value="'+item.ID+'">'+item.NAME+'</div>');
+		});
+	}
+	if(ddProjectArray.length<=0){
+		$(".projectDD").find(".icDown").parent().prev().remove();
+		$(".projectDD").find(".icDown").parent().remove();
+	}else{
+		$.each(ddProjectArray,function(i,item){
+			$(".projectDD .ddContent").append('<div class="ddItem changeProject '+(currentProjectId==item.ID?"current":"")+'" data-value="'+item.ID+'" data-clientId="'+item.CLIENT_ID+'" style="display:none;">'+item.NAME+'</div>');
+		});
+	}
+	$(".projectDD .ddContent .ddItem[data-clientId='"+currentClientId+"']").show();
+	RefreshProjectDDMaxHeight(currentClientId);
+
+	$(".clientDD .ddContent").css({width:320,height:$(".clientDD .ddContent .ddItem").length*57});
+	$(".projectDD .ddContent").css({width:320,height:$(".projectDD .ddContent .ddItem").length*57});
+	new jScrollBox($(".clientDD .ddContent"),{step:114,scroll:{color:"#FFFFFF"}});
+	new jScrollBox($(".projectDD .ddContent"),{step:114,scroll:{color:"#FFFFFF"}});
+	
+	$(".ddHolder").bind("mouseenter",function(e){$(this).addClass("hovered");});
+	$(".ddHolder").bind("mouseleave",function(e){$(this).removeClass("hovered");});
+	$(".menuContent .ddButton").bind("click",function(e){
+		var $dd=$(this).parent();
+		if($dd.hasClass("active")){
+			$dd.removeClass("active");
+			$dd.find(">.ddContent").slideUp(180);
+		}else{
+			if($dd.find(">.ddContent .ddItem").length<=0) return false;
+			$dd.addClass("active");
+			$dd.find(">.ddContent").slideDown(180);
+		}
+	});
+	$(".menuContent .ddContent .ddItem").bind("click",function(){
+		var $dd=$(this).parents(".ddHolder").first();
+		$dd.find(">.ddButton .title").empty().append($(this).html());
+		$dd.find(".ddButton").trigger("click");
+		
+		if($dd.hasClass("clientDD")){
+			$(".projectDD .ddContent .ddItem").hide();
+			$(".projectDD .ddContent .ddItem[data-clientId='"+$(this).attr("data-value")+"']").show();
+			RefreshProjectDDMaxHeight($(this).attr("data-value"));
+			
+			$(".projectDD").attr("data-value","");
+			$(".projectDD>.ddButton .title").empty().append("<span style='opacity:.68;'>Select Project</span>");
+		}
+	});
+	$(".menuContent .ddContent .changeProject").bind("click",function(){
+		if($(this).attr("data-value")!=currentProjectId) top.location.href="?tp="+$(this).attr("data-value");
+	});
+	$(document).bind("mouseup",function(){
+		$(".menuContent .ddHolder.active:not(.hovered)>.ddButton").trigger("click");
+	});
+	
+	function RefreshProjectDDMaxHeight(clientId){
+		var iH=0;
+		
+		// Not working bcs element is hidden, and outerHeight will get only margin top+bottom size, without including text height
+		//$.each($(".projectDD .ddContent .ddItem[data-clientId='"+clientId+"']"),function(){
+		//	iH+=$(this).outerHeight(true);
+		//});
+		
+		// We know that height of item including margins is 57. It won't go on two lines because width will grow if item text is long.
+		iH=$(".projectDD .ddContent .ddItem[data-clientId='"+clientId+"']").length*57;
+		if(iH>286) iH=286;
+		$(".projectDD .ddContent").css({"max-height":iH});
+	}
+</script>

@@ -1,0 +1,27 @@
+<div class="bubblePage">
+	<div class="groups" data-categoryId="@_CATEGORY_ID">
+		<div class="groupHolder">@_GROUPS</div>
+	</div>
+</div>
+<script>
+	Pages.addCSS(["css/bubble.css"]);
+	Pages.addJS(["js/pages.bubble.js"]);
+
+	Pages.callbackAfterShow=function(){
+		Home.bubble.refresh();
+	}
+	$.each($(".groups:last()>.groupHolder>.group>.groupItems>.groupItemsHolder .groupItem"),function(){
+		$(this).after('<div class="groupItemText ns">'+$(this).find(">div").html()+'</div>');
+	});
+	$.each($(".groups:last()>.groupHolder>.group"),function(){
+		var el=$(this);
+		setTimeout(function(){el.find(">.groupItems>.groupItemsHolder").scrollTop(0);},200);
+		new jScrollBox($(this).find(">.groupItems>.groupItemsHolder"),{step:100,scroll:{color:"#FFFFFF"}});
+	});
+	
+	if($(".bubblePage:last()")[0].addEventListener){
+		$(".bubblePage:last()")[0].addEventListener("mousewheel",Home.bubble.mouseWheelHandler,false);
+		$(".bubblePage:last()")[0].addEventListener("DOMMouseScroll",Home.bubble.mouseWheelHandler,false);
+	}else $(".bubblePage:last()").attachEvent("onmousewheel",Home.bubble.mouseWheelHandler);
+	
+</script>

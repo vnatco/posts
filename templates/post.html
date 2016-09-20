@@ -1,0 +1,22 @@
+<div class="viewPage" data-id="@_ID">
+	<div class="vpItemPointer"></div>
+	<div class="viewPageContent">
+		<div class="vpItems">
+			<div class="vpItemsHolder">@_FIELDS</div>
+		</div>
+		<div class="addNew"><button class="text color ns fern">Add Text</button><button class="image color ns terraCotta">Add Image</button><button class="code color ns pictonBlue">Add Code</button></div>
+	</div>
+	<div></div>
+</div>
+
+<script>
+	Pages.addCSS(["css/view.css","lib/prettify/themes/snappy.css"]);
+	Pages.addJS(["js/pages.view.js","lib/prettify/run_prettify.js"]);
+	
+	Pages.callbackAfterShow=function(){
+		if("@_PAGE_URL"!="") Menu.showShareButton("@_PAGE_URL");
+		Home.view.refresh();
+	}
+	setTimeout(function(){$(".viewPage:last()").parent().scrollTop(0);},200);
+	new jScrollBox($(".viewPage:last()"),{step:140,scroll:{color:"#FFFFFF"}});
+</script>

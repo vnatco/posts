@@ -1,0 +1,5 @@
+div.context{position:absolute;z-index:9999;top:-999px;left:-999px;opacity:0;transform:scale(0.86);transition:opacity .16s,transform .28s cubic-bezier(.25,2.6,.5,1);}
+div.context div.itemsHolder{border-radius:40px;height:40px;padding-left:3px;white-space:nowrap;}
+div.context div.itemsHolder.default{background:#626262;}
+div.context div.itemsHolder div.contextItem{display:inline-block;width:34px;height:34px;border-radius:34px;background-color:rgba(0,0,0,0);opacity:0;transition:opacity .16s,background-color .22s,transform .3s cubic-bezier(.25,2.6,.5,1);margin:3px 3px 0px 0px;}
+div.context div.itemsHolder div.contextItem:hover{background-color:rgba(0,0,0,.18);/*transform:scale(1.04);*/}

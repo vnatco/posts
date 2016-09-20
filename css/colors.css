@@ -1,0 +1,73 @@
+.color								{transition:color .2s,background-color .2s,border-color .2s,stroke .2s;}
+.color.fern							{background-color:#61BD6D;stroke:#61BD6D !important;color:#FFFFFF;}
+.color.hover.fern,
+button.color.fern:hover				{background-color:#5BA464;stroke:#5BA464 !important;}
+.color.chateauGreen					{background-color:#41A85F;stroke:#41A85F !important;color:#FFFFFF;}
+.color.hover.chateauGreen,
+button.color.chateauGreen:hover		{background-color:#419459;stroke:#419459 !important;}
+.color.mountainMeadow				{background-color:#1ABC9C;stroke:#1ABC9C !important;color:#FFFFFF;}
+.color.hover.mountainMeadow,
+button.color.mountainMeadow:hover	{background-color:#22A38A;stroke:#22A38A !important;}
+.color.persianGreen					{background-color:#00A885;stroke:#00A885 !important;color:#FFFFFF;}
+.color.hover.persianGreen,
+button.color.persianGreen:hover		{background-color:#0D9478;stroke:#0D9478 !important;}
+.color.pictonBlue					{background-color:#54acd2;stroke:#54acd2 !important;color:#FFFFFF;}
+.color.hover.pictonBlue,
+button.color.pictonBlue:hover		{background-color:#5097b5;stroke:#5097b5 !important;}
+.color.curiousBlue					{background-color:#3D8EB9;stroke:#3D8EB9 !important;color:#FFFFFF;}
+.color.hover.curiousBlue,
+button.color.curiousBlue:hover		{background-color:#3E7FA1;stroke:#3E7FA1 !important;}
+.color.mariner						{background-color:#2C82C9;stroke:#2C82C9 !important;color:#FFFFFF;}
+.color.hover.mariner,
+button.color.mariner:hover			{background-color:#3075AE;stroke:#3075AE !important;}
+.color.denim						{background-color:#2969B0;stroke:#2969B0 !important;color:#FFFFFF;}
+.color.hover.denim,
+button.color.denim:hover				{background-color:#2E619A;stroke:#2E619A !important;}
+.color.wisteria						{background-color:#9365B8;stroke:#9365B8 !important;color:#FFFFFF;}
+.color.hover.wisteria,
+button.color.wisteria:hover			{background-color:#835EA0;stroke:#835EA0 !important;}
+.color.blueGem						{background-color:#553982;stroke:#553982 !important;color:#FFFFFF;}
+.color.hover.blueGem,
+button.color.blueGem:hover			{background-color:#513B75;stroke:#513B75 !important;}
+.color.chambray						{background-color:#475577;stroke:#475577 !important;color:#FFFFFF;}
+.color.hover.chambray,
+button.color.chambray:hover			{background-color:#46516C;stroke:#46516C !important;}
+.color.blueWhale					{background-color:#28324e;stroke:#28324e !important;color:#FFFFFF;}
+.color.hover.blueWhale,
+button.color.blueWhale:hover			{background-color:#2D354C;stroke:#2D354C !important;}
+.color.energy						{background-color:#F7DA64;stroke:#F7DA64 !important;color:#FFFFFF;}
+.color.hover.energy,
+button.color.energy:hover			{background-color:#D3BC5D;stroke:#D3BC5D !important;}
+.color.turbo						{background-color:#FAC51C;stroke:#FAC51C !important;color:#FFFFFF;}
+.color.hover.turbo,
+button.color.turbo:hover				{background-color:#D5AB24;stroke:#D5AB24 !important;}
+.color.neonCarrot					{background-color:#FBA026;stroke:#FBA026 !important;color:#FFFFFF;}
+.color.hover.neonCarrot,
+button.color.neonCarrot:hover		{background-color:#D68D2C;stroke:#D68D2C !important;}
+.color.sun							{background-color:#f37934;stroke:#f37934 !important;color:#FFFFFF;}
+.color.hover.sun,
+button.color.sun:hover				{background-color:#D06E37;stroke:#D06E37 !important;}
+.color.terraCotta					{background-color:#EB6B56;stroke:#EB6B56 !important;color:#FFFFFF;}
+.color.hover.terraCotta,
+button.color.terraCotta:hover		{background-color:#C96352;stroke:#C96352 !important;}
+.color.valencia						{background-color:#D14841;stroke:#D14841 !important;color:#FFFFFF;}
+.color.hover.valencia,
+button.color.valencia:hover			{background-color:#B44741;stroke:#B44741 !important;}
+.color.cinnabar						{background-color:#E25041;stroke:#E25041 !important;color:#FFFFFF;}
+.color.hover.cinnabar,
+button.color.cinnabar:hover			{background-color:#C24D41;stroke:#C24D41 !important;}
+.color.wellRed						{background-color:#B8312F;stroke:#B8312F !important;color:#FFFFFF;}
+.color.hover.wellRed,
+button.color.wellRed:hover			{background-color:#A03433;stroke:#A03433 !important;}
+.color.almondFrost					{background-color:#A38F84;stroke:#A38F84 !important;color:#242424;}
+.color.hover.almondFrost,
+button.color.almondFrost:hover		{background-color:#908077;stroke:#908077 !important;}
+.color.ironGray						{background-color:#75706B;stroke:#75706B !important;color:#FFFFFF;}
+.color.hover.ironGray,
+button.color.ironGray:hover			{background-color:#6B6763;stroke:#6B6763 !important;}
+.color.whiteSmoke					{background-color:#EFEFEF;stroke:#EFEFEF !important;color:#242424;}
+.color.hover.whiteSmoke,
+button.color.whiteSmoke:hover		{background-color:#CCCCCC;stroke:#CCCCCC !important;}
+.color.iron							{background-color:#D1D5D8;stroke:#D1D5D8 !important;color:#242424;}
+.color.hover.iron,
+button.color.iron:hover				{background-color:#B4B8BA;stroke:#B4B8BA !important;}

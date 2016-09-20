@@ -1,0 +1,19 @@
+<div class="pageHome">
+	<div class="bubbles">
+		@_BUBBLES
+	</div>
+</div>
+<script>
+	Pages.addCSS(["css/home.css"]);
+	Pages.addJS(["js/pages.home.js"]);
+	
+	Pages.callbackAfterShow=function(){
+		Home.bubbles.refresh();
+	}
+	$.each($(".bubbles:last()>.bubble"),function(){
+		$(this).after('<div class="bubbleText ns">'+$(this).find(">div").html()+'</div>');
+	});
+	
+	setTimeout(function(){$(".pageHome:last()").parent().scrollTop(0);},200);
+	new jScrollBox($(".pageHome:last()"),{step:120,scroll:{color:"#FFFFFF"}});
+</script>

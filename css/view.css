@@ -1,0 +1,15 @@
+div.viewPage{}
+
+div.viewPage div.viewPageContent{margin:0px 20px;position:relative;z-index:3;}
+div.viewPage div.viewPageContent div.vpItems{}
+div.viewPage div.viewPageContent div.vpItems>div.vpItemsHolder{}
+div.viewPage div.viewPageContent div.vpItems>div.vpItemsHolder>div.vpItem{margin-bottom:20px;}
+div.viewPage div.viewPageContent div.vpItems>div.vpItemsHolder>div.vpItem>div.text ul{padding-left:32px;}
+div.viewPage div.viewPageContent div.vpItems>div.vpItemsHolder>div.vpItem>div.spacer{}
+div.viewPage div.viewPageContent div.vpItems>div.vpItemsHolder>div.vpItem>div.text{}
+div.viewPage div.viewPageContent div.vpItems>div.vpItemsHolder>div.vpItem>div.code{}
+
+div.viewPage div.vpItemPointer{position:absolute;z-index:2;top:0px;left:0px;width:4px;height:0px;background:#606060;}
+
+div.viewPage div.viewPageContent div.addNew{margin-bottom:20px;}
+div.viewPage div.viewPageContent div.addNew button{border:none;border-radius:20px;font-size:14px;padding:6px 12px;margin-right:10px;}

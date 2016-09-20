@@ -1,0 +1,21 @@
+div.bubblePage{height:100%;}
+div.bubblePage div.navigation{position:absolute;top:-25px;right:20px;opacity:1;transition:opacity .14s;}
+div.bubblePage div.navigation.hidden{opacity:0;}
+
+div.bubblePage div.groups{height:100%;position:relative;overflow:hidden;transition:all 0.48s cubic-bezier(.39,.82,.81,1);}
+div.bubblePage div.groups>div.groupHolder{height:100%;position:relative;transition:left .22s;left:0px;}
+div.bubblePage div.groups>div.groupHolder>div.group{height:100%;position:relative;float:left;width:372px;margin-left:8px;}
+div.bubblePage div.groups>div.groupHolder>div.group:first-child{margin-left:14px;}
+
+div.bubblePage div.groups>div.groupHolder>div.group>div.groupTitle{margin-left:6px;font-size:20x;margin-bottom:10px;min-height:24px;cursor:default;}
+div.bubblePage div.groups>div.groupHolder>div.group>div.groupItems{position:relative;}
+div.bubblePage div.groups>div.groupHolder>div.group>div.groupItems>div.groupItemsHolder{}
+div.bubblePage div.groups>div.groupHolder>div.group>div.groupItems>div.groupItemsHolder div.jScrollBox{padding:0px 8px 0px 6px;}
+div.bubblePage div.groups>div.groupHolder>div.group>div.groupItems>div.groupItemsHolder div.groupItem{position:relative;background:#282828;padding:8px 12px;margin-bottom:10px;border-radius:4px;transition:background .16s,transform .3s cubic-bezier(.25,2.6,.5,1);}
+div.bubblePage div.groups>div.groupHolder>div.group>div.groupItems>div.groupItemsHolder div.groupItem:hover{background:#202020;}
+div.bubblePage div.groups>div.groupHolder>div.group>div.groupItems>div.groupItemsHolder div.groupItem.pressed{transform:scale(1.016);}
+div.bubblePage div.groups>div.groupHolder>div.group>div.groupItems>div.groupItemsHolder div.groupItem>div{font-size:16px;opacity:0;}
+div.bubblePage div.groups>div.groupHolder>div.group>div.groupItems>div.groupItemsHolder div.groupItemText{font-size:16px;position:absolute;top:0px;left:0px;opacity:0;cursor:default;}
+
+div.bubblePage div.groups>div.groupHolder>div.group>div.groupScroller{position:absolute;top:0px;right:-2px;bottom:10px;width:4px;overflow:hidden;}
+div.bubblePage div.groups>div.groupHolder>div.group>div.groupScroller>div.scroll{position:absolute;top:0px;width:4px;background:#BABABA;opacity:0;}

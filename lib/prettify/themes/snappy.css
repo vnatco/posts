@@ -1,0 +1,20 @@
+/*
+ * Modifications Copyright (C) 2016 by Vladimeri Natchkepia
+ */
+pre.theme-snappy{background-color:#393939;padding:10px !important;border-radius:6px;font-size:.82em;color:#e3e2e0;border:none !important;}
+pre.theme-snappy code{font-family:'Source Code Pro',Monaco,Consolas,"Lucida Console",monospace !important;}
+pre.theme-snappy .pln{color:#e3e2e0;}
+pre.theme-snappy .str{color:#4ea1df;}
+pre.theme-snappy .kwd{color:#4ea1df;}
+pre.theme-snappy .com{color:#696969;}
+pre.theme-snappy .typ{color:#f66153;}
+pre.theme-snappy .lit{color:#808dd3;}
+pre.theme-snappy .pun,
+pre.theme-snappy .opn,
+pre.theme-snappy .clo{color:#e3e2e0;}
+pre.theme-snappy .tag{color:#4ea1df;}
+pre.theme-snappy .atn{color:#f66153;}
+pre.theme-snappy .atv{color:#808dd3;}
+pre.theme-snappy .dec,
+pre.theme-snappy .var{color:#4ea1df;}
+pre.theme-snappy .fun{color:#4ea1df;}

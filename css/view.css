@@ -5,6 +5,7 @@ div.viewPage div.viewPageContent div.vpItems{}
 div.viewPage div.viewPageContent div.vpItems>div.vpItemsHolder{}
 div.viewPage div.viewPageContent div.vpItems>div.vpItemsHolder>div.vpItem{margin-bottom:20px;}
 div.viewPage div.viewPageContent div.vpItems>div.vpItemsHolder>div.vpItem>div.text ul{padding-left:32px;}
+div.viewPage div.viewPageContent div.vpItems>div.vpItemsHolder>div.vpItem>div.text ol{padding-left:32px;}
 div.viewPage div.viewPageContent div.vpItems>div.vpItemsHolder>div.vpItem>div.spacer{}
 div.viewPage div.viewPageContent div.vpItems>div.vpItemsHolder>div.vpItem>div.text{}
 div.viewPage div.viewPageContent div.vpItems>div.vpItemsHolder>div.vpItem>div.code{}
